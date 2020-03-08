@@ -1,6 +1,12 @@
 const { User } = require('../../src/app/models')
 
-describe('Authentication', () => {
+const truncate = require('../utils/truncate')
+
+describe('First Tests', () => {
+	beforeEach(async () => {
+		await truncate()
+	})
+
 	it('Should create a user', async () => {
 		const user = await User.create({
 			name: 'nubelsondev',
