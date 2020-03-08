@@ -1,5 +1,7 @@
 const routes = require('express').Router()
 
-// Route definition here ...
+const sessionController = require('./app/controllers/sessionController')
+
+routes.post('/sessions', sessionController.store)
 
 module.exports = routes
