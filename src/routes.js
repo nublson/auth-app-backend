@@ -1,5 +1,10 @@
 const routes = require('express').Router()
+const { User } = require('./app/models')
 
-// Route definition here ...
+User.create({
+	name: 'Nubelson',
+	email: 'nubelsondev@hotmail.com',
+	password_hash: '123456789'
+})
 
 module.exports = routes
